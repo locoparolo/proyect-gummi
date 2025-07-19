@@ -46,7 +46,6 @@ def signin(request):
     if request.method == "GET":
         return render(request, "signin.html", {"form": AuthenticationForm})
     else:
-        breakpoint()
         User = authenticate(request,
             username=request.POST["username"],
             password=request.POST["password"],
